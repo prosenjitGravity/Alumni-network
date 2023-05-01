@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+
+
+/* .whatsapp{
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)
+} */
+.footer-text{
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+     font-size: 18px;
+      color: white;
+}
+hr{
+    color: white;
+}
+.footer-text1{
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
+}
+.footer-text2{
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+.logo{
+    width:35px
+}

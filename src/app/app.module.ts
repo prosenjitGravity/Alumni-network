@@ -26,6 +26,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatRadioModule } from '@angular/material/radio';
 import { AboutComponent } from './pages/about/about.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ActivityComponent } from './components/activity/activity.component';
+import { HelpPageComponent } from './pages/help-page/help-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     AppbarComponent,
     HomeComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FooterComponent,
+    ActivityComponent,
+    HelpPageComponent
   ],
   imports: [
     BrowserModule,

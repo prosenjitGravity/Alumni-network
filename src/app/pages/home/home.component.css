@@ -3,7 +3,8 @@
 
 
 .heading{
-    color: #009688;
+    /* color: #009688; */
+    color: #103928;
     font-size: 32px;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 700;
