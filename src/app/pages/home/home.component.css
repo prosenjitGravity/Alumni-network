@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+
+
+
+.heading{
+    color: #009688;
+    font-size: 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    line-height: 45px;
+}
