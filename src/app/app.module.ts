@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppbarComponent } from './components/appbar/appbar.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 // @angular material libraries importing 
@@ -29,6 +28,25 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ActivityComponent } from './components/activity/activity.component';
 import { HelpPageComponent } from './pages/help-page/help-page.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { ProfileComponent } from './components/profile/profile.component';
+import { PostComponent } from './components/post/post.component';
+import { LoginComponent } from './components/login/login.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { EducationComponent } from './components/education/education.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { KnowledgeComponent } from './pages/knowledge/knowledge.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { CardsComponent } from './components/cards/cards.component';
+import {MatChipsModule} from '@angular/material/chips';
+import { AdminAppbarComponent } from './components/admin-appbar/admin-appbar.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { MyprofileComponent } from './pages/myprofile/myprofile.component';
+import { PostactivityComponent } from './components/postactivity/postactivity.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 
 @NgModule({
   declarations: [
@@ -39,12 +57,26 @@ import { HelpPageComponent } from './pages/help-page/help-page.component';
     NotFoundComponent,
     FooterComponent,
     ActivityComponent,
-    HelpPageComponent
+    HelpPageComponent,
+    RegistrationComponent,
+    ProfileComponent,
+    PostComponent,
+    LoginComponent,
+    SkillsComponent,
+    EducationComponent,
+    KnowledgeComponent,
+    GalleryComponent,
+    CardsComponent,
+    AdminAppbarComponent,
+    DashboardComponent,
+    MyprofileComponent,
+    PostactivityComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -58,7 +90,12 @@ import { HelpPageComponent } from './pages/help-page/help-page.component';
     MatSelectModule,
     MatTooltipModule,
     MatDialogModule,
-    MatRadioModule
+    MatRadioModule,
+    MatStepperModule,
+    MatSidenavModule,
+    MatListModule,
+    MatChipsModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

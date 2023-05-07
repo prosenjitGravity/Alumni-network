@@ -1,0 +1,39 @@
+.example-header-image {
+    background-image: url('/assets/images/merida.png');
+    background-size: cover;
+    width:55px;
+    height: 55px;
+  }
+  mat-grid-tile {
+    background: lightblue;
+  }
+  .relative{
+    position: relative;
+  }
+  .absolute-1{
+    position: absolute;
+    left: 10px;
+  }
+  .absolute-2{
+    position: absolute;
+    left: calc(100%/3)
+
+  }
+  .absolute-3{
+    position: absolute;
+    right: 10px;
+    
+  }
+  .example-header-image {
+    position: absolute;
+    top:10px;
+    left:20px;
+    background-size: cover;
+    width:55px;
+    height: 55px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}

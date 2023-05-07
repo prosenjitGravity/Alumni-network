@@ -1,0 +1,94 @@
+<div class="">
+  <app-appbar></app-appbar>
+  <article>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <!--style="background-color: #f3f2ef;"-->
+          <div class="col-md-6">
+            <div class="p-1 text-center " >
+              <h1 class="activity" style="color: #616161">
+                Students <span style="color: #1a73e8">Activities</span> & <<span
+                  style="color: #1a73e8"
+                  >{{ programm }}</span
+                >/>
+              </h1>
+              <p class="text-left"  style="color:#616161;font-family: 'Noto Sans', sans-serif;">
+                Our students share a common desire for learning and dedication
+                to improve their lives through further education. Find out what
+                it's like to be part of the Netaji Subhash Engineering College
+                global student community and share your enthusiasm and
+                experiences with fellow students all over the world.
+              </p>
+            </div>
+            <div class="d-flex justify-content-center p-2">
+              <button mat-fab extended color="primary" class="btn">
+                Join Us Now
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <app-gallery></app-gallery>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="p-2">
+      <app-cards></app-cards>
+    </section> -->
+  </article>
+  <article>
+    <section>
+      <div class="container">
+        <!-- <h1 class="text-center" style="color: #1a73e8;">Google Developer Student Clubs NSEC </h1> -->
+        <div>
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="assets/images/about-box.png" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md-8">
+              <div class="p-2">
+                <h1 class="developer">
+                  Make good things <span style="color: #1a73e8">together</span>.
+                </h1>
+                <h1 style="color: #616161">Developer Student Clubs NSEC</h1>
+                <p style="font-size: 100%">
+                  Developer Student Clubs NSEC is a prominent student developer
+                  community in Eastern India, based out of Netaji Subhash
+                  Engineering College campus in Kolkata, India. The club boasts
+                  over 3000+ members from all over the world. We believe in
+                  empowering the youth with technology to build sustainable,
+                  dynamic, and scalable solutions for society.
+                </p>
+              </div>
+              <div class="p-2">
+                <mat-chip-listbox aria-label="Fish selection">
+                  <mat-chip-option routerLink="{{ gdsc_link }}"
+                    >#dscnsec</mat-chip-option
+                  >
+                  <mat-chip-option>#nsec</mat-chip-option>
+                </mat-chip-listbox>
+              </div>
+              <div class="d-flex">
+                <div class="p-2">
+                  <button
+                    mat-flat-button
+                    style="background-color: #1a73e8; color: white"
+                  >
+                    Join Nsec Gdsc
+                  </button>
+                </div>
+                <div class="p-2">
+                  <button mat-stroked-button color="primary">Learn more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</div>
+<div>
+  <app-footer></app-footer>
+</div>

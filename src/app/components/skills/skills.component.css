@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+.relative{
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+.absolute{
+    position: absolute;
+    top:5px;
+    right:20px
+}

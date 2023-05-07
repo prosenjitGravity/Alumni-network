@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="p-2">
+    <mat-grid-list cols="3" gutterSize="26px">
+        <mat-grid-tile *ngFor="let image of images">
+            <div class="p-2">
+            <div class="card" >
+                <img [src]="image.src" alt="{{ image.description }}" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title heading">{{image.heading}}</h5>
+                  <p class="card-text">{{image.description}}</p>
+                </div>
+              </div>
+              </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+</div>

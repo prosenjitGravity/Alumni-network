@@ -1,0 +1,28 @@
+<div class="container-fluid p-1">
+    <mat-card>
+      <mat-card-header class="example-card">
+        <div mat-card-avatar class="p-1">
+          <img
+            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
+            class="example-header-image"
+            alt=""
+          />
+        </div>
+        <mat-form-field appearance="outline" class="post-input">
+          <!-- <mat-label>Outline form field</mat-label> -->
+          <input matInput placeholder="Create your post" id="input" />
+          <mat-icon matSuffix>post</mat-icon>
+        </mat-form-field>
+      </mat-card-header>
+      <mat-card-content>
+        <div class=" p-2 d-flex justify-content-center">
+        <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="image"> <mat-icon color="primary">photo</mat-icon> Image</mat-button-toggle>
+            <mat-button-toggle value="video"><mat-icon color="accent">smart_display</mat-icon> Video</mat-button-toggle>
+            <mat-button-toggle value="event" color="warn"><mat-icon color="warn">event</mat-icon> Event</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

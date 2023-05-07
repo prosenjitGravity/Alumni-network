@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+mat-card-title{
+    font-family: 'JetBrains Mono', monospace;
+}
+.education-logo{
+    width: 40px;
+}
+
+.card-body education-logo info{
+    display:inline;
+}
+.collegeName{
+    font-size: 15px;
+    font-weight: 550;
+}

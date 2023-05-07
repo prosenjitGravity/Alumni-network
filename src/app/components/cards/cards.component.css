@@ -1,0 +1,9 @@
+.example-card {
+    max-width: 400px;
+  }
+.heading{
+    text-align: left;
+    padding-top: 8px;
+    font-size: 20px;
+    font-weight: 700;
+}
