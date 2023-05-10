@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Noto+Sans&display=swap');
+
+.user-title{
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+}
+mat-toolbar{
+  background-color: white;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .profile{
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    width: 40px;
+    height:40px;
+    overflow: hidden;
+}
+.image{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}

@@ -8,7 +8,11 @@ import { FormGroup,FormControl, } from '@angular/forms';
 })
 export class RegistrationComponent {
   hide = true;
-
+  public first_name:String='';
+  public last_name:String='';
+  public email:String='';
+  public password:String='';
+  ngOnInit() {}
   firstFormGroup = this._formBuilder.group({
     firstName:['', Validators.required],
     lastName:['', Validators.required],
@@ -22,6 +26,10 @@ export class RegistrationComponent {
     secondCtrl: '',
   });
   isOptional = true;
-
+  
   constructor(private _formBuilder: FormBuilder) {}
+  formData(){
+    console.log(this.firstFormGroup.value);
+    
+  }
 }

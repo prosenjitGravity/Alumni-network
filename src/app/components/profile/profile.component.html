@@ -2,7 +2,7 @@
   <mat-card class="mb-2">
     <div class="image-wrapper">
       <img
-        src="assets/images/cover-image.jpg"
+        src={{cover_image}}
         class="card-img-top img1"
         alt="..."
       />
@@ -17,14 +17,14 @@
       </button>
       <div class="img2">
         <img
-          src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg "
+          src={{user_image}}
           class="profile-image"
           alt=""
         />
       </div>
     </div>
     <div class="card-body">
-      <div class="d-flex justify-content-end p-1">
+      <div class="d-flex justify-content-end p-2">
         <button
           mat-icon-button
           aria-label="Example icon button with a vertical three dot icon"
@@ -32,7 +32,24 @@
           <mat-icon>edit</mat-icon>
         </button>
       </div>
-      <h1 class="name p-1">Merida Avatar</h1>
+      
+      <div class="name">
+          <h1>{{first_name}}  {{last_name}} <span style="font-size: 12px; color: #616161;">(He/Him)</span></h1>
+          <div >
+              <mat-chip-set class="example-chip"cdkDropList cdkDropListOrientation="horizontal">
+                  <mat-chip class="example-box"cdkDrag>#development</mat-chip>
+                  <mat-chip class="example-box"cdkDrag>#datastructure & algorithm</mat-chip>
+                  <mat-chip class="example-box"cdkDrag>#development</mat-chip>
+              </mat-chip-set>
+          </div>
+          <div class="p-1">
+            <p>No Address Found!</p>
+          </div>
     </div>
+    
+    <div class="name p-3">
+      <button mat-raised-button  style="border-radius: 20px; background-color: #1a73e8;color:white"><mat-icon>add</mat-icon>Follow</button>
+    </div>
+  </div>
   </mat-card>
 </div>

@@ -7,22 +7,24 @@
     position: relative;
     top: 0;
     left: 0;
-    height:300px
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height:200px
 }
 .img2{
     position: absolute;
-    top: 160px;
-    left: 21px;
-    width: 200px;
-    height:200px;
+    top: 100px;
+    left: 20px;
+    width: 150px;
+    height:150px;
     border-radius: 100%;
     border: 4px solid white;
     overflow: hidden;
 }
 .profile-image{
     width:100%;
-  height:100%;
-   object-fit: cover;
+    height:100%;
+    object-fit: cover;
 }
 .edit{
     position: absolute;
@@ -31,6 +33,8 @@
 }
 .name{
     font-weight: 500;
+    margin-left: 20px;
+    line-height: .8;
 }
 /* @media only screen and(max-width:576px){
     .img1{

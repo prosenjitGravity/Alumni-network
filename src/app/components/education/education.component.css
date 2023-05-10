@@ -7,10 +7,18 @@ mat-card-title{
     width: 40px;
 }
 
-.card-body education-logo info{
-    display:inline;
+.card-body{
+    display: flex;
+    align-content: space-between;
+    justify-content: flex-start;
 }
 .collegeName{
     font-size: 15px;
-    font-weight: 550;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 0.5;
 }
+.stream{
+    line-height: 0.5;
+}
+

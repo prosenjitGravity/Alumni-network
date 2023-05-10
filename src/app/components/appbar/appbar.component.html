@@ -1,12 +1,12 @@
 <div>
     <mat-toolbar class="sticky" color="primary">
         <mat-toolbar-row>
-          <span [routerLink]="'/'">{{title}}</span>
+          <span [routerLink]="'/'" class="project-title">{{title}}</span>
           <span class="example-spacer"></span>
           <div>
-            <a mat-button routerLink='/about'> About </a>
-            <a mat-button routerLink='/register'> Join </a>
-            <a mat-button routerLink="/login"> Signin </a>
+            <a mat-button routerLink='/about' class="project-title" > About </a>
+            <a mat-button routerLink='/register' class="project-title"> Join </a>
+            <a mat-button routerLink="/login" class="project-title"> Signin </a>
           </div>
         </mat-toolbar-row>
       </mat-toolbar>  

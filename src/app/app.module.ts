@@ -46,6 +46,11 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MyprofileComponent } from './pages/myprofile/myprofile.component';
 import { PostactivityComponent } from './components/postactivity/postactivity.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { LinksComponent } from './components/links/links.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { ProfileToolbarComponent } from './components/profile-toolbar/profile-toolbar.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 @NgModule({
@@ -70,7 +75,11 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     AdminAppbarComponent,
     DashboardComponent,
     MyprofileComponent,
-    PostactivityComponent
+    PostactivityComponent,
+    AboutMeComponent,
+    LinksComponent,
+    ExperienceComponent,
+    ProfileToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -95,7 +104,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatSidenavModule,
     MatListModule,
     MatChipsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./appbar.component.css']
 })
 export class AppbarComponent {
- public title:String ='Alumni Network'
+ public title:String ='Alumni Community'
 }

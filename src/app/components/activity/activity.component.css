@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&family=Noto+Sans&display=swap');
+
+.project-font{
+    font-family: 'JetBrains Mono', monospace;
+  }
 .student{
     font-weight: 500;
-    font-size: 45px;
+    font-size: 35px;
     color: #607D8B;
     line-height: 45px;
 }
