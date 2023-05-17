@@ -14,6 +14,7 @@ import { EducationComponent } from './components/education/education.component';
 import { KnowledgeComponent } from './pages/knowledge/knowledge.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MyprofileComponent } from './pages/myprofile/myprofile.component';
+import { ApiCallComponent } from './components/api-call/api-call.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,9 @@ const routes: Routes = [
   },
   {
     path:'my-profile', component:MyprofileComponent
+  },
+  {
+    path:'fetch-api',component:ApiCallComponent
   },
   {
     path:'**',component:NotFoundComponent

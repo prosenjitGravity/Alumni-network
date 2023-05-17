@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppbarComponent } from './components/appbar/appbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 // @angular material libraries importing 
@@ -51,14 +51,22 @@ import { LinksComponent } from './components/links/links.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProfileToolbarComponent } from './components/profile-toolbar/profile-toolbar.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import { LayoutModule } from '@angular/cdk/layout';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { ApiCallComponent } from './components/api-call/api-call.component';
+import { ValueArrayPipe } from './pipes/value-array.pipe';
+import {AppbarComponent} from './components/appbar/appbar.component'
+import {FlexLayoutModule} from "@angular/flex-layout";
+import { ProfileLinksComponent } from './components/profile-links/profile-links.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppbarComponent,
     HomeComponent,
     AboutComponent,
+    AppbarComponent,
     NotFoundComponent,
     FooterComponent,
     ActivityComponent,
@@ -79,12 +87,18 @@ import {MatBadgeModule} from '@angular/material/badge';
     AboutMeComponent,
     LinksComponent,
     ExperienceComponent,
-    ProfileToolbarComponent
+    ProfileToolbarComponent,
+    ToolbarComponent,
+    ApiCallComponent,
+    ValueArrayPipe,
+    ProfileLinksComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
@@ -105,7 +119,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatListModule,
     MatChipsModule,
     MatButtonToggleModule,
-    MatBadgeModule
+    MatBadgeModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

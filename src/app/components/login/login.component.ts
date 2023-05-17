@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
    public hide:Boolean=true;
+   public login:String='assets/images/login.jpg'
 }

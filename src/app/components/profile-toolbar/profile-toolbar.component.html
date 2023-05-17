@@ -17,3 +17,21 @@
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
+<mat-toolbar class="secondToolbar"
+             [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+             <mat-toolbar-row>
+              <span [routerLink]="'/'" class="user-title">Welcome,{{ name }}</span>
+              <span class="example-spacer"></span>
+              <div>
+                <a mat-icon-button routerLink="/about" class="project-title">
+                  <mat-icon matBadge="0" matBadgeColor="warn">notifications</mat-icon>
+                  <span class="cdk-visually-hidden"></span>
+                </a>
+                <a mat-button class="project-title">
+                  <div class="profile">
+                    <img src="{{ user_image }}" class="image" alt="" />
+                  </div>
+                </a>
+              </div>
+            </mat-toolbar-row>
+</mat-toolbar>

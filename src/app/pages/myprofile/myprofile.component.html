@@ -1,36 +1,41 @@
 <div>
+  <section>
     <app-profile-toolbar></app-profile-toolbar>
-
-    <div class="container-fluid">
-        <div>
-            <div class="row">
-                <div class="col-md-7">
-                    <article class="p-1">
-                        <section class="">
-                            <app-profile></app-profile>
-                        </section>
-                        <section style="padding-bottom:8px;">
-                            <app-about-me></app-about-me>
-                        </section>
-                        <section style="padding-bottom:8px;">
-                            <app-education></app-education>
-                        </section >
-                        <section style="padding-bottom:8px;">
-                            <app-skills></app-skills>
-                        </section>
-                    </article>
-                </div>
-                <div class="col-md-5">
-                    <article>
-                        <section>
-                            <app-postactivity></app-postactivity>
-                        </section>
-                        <section>
-                            <app-post></app-post>
-                        </section>
-                    </article>
-                </div>
-            </div>
+  </section>
+  <div class="container-fluid">
+    <div>
+      <div class="row">
+        <div class="col-md-7">
+          <article class="p-1">
+            <section class="">
+              <app-profile></app-profile>
+            </section>
+            <section style="padding-bottom: 8px">
+              <app-about-me></app-about-me>
+            </section>
+            <section style="padding-bottom: 8px">
+              <app-education></app-education>
+            </section>
+            <section style="padding-bottom: 8px">
+              <app-skills></app-skills>
+            </section>
+            <section style="padding-bottom: 8px">
+              <app-profile-links></app-profile-links>
+            </section>
+          </article>
         </div>
+        <div class="col-md-5">
+          <article>
+            <section style="padding-bottom: 8px">
+              <app-postactivity></app-postactivity>
+            </section>
+            <section>
+              <h2 class="text-center p-2">Hi, Merida Here is Your All Posts</h2>
+              <app-post></app-post>
+            </section>
+          </article>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

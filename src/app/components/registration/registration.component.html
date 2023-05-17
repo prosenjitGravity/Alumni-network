@@ -9,7 +9,7 @@
           </div>
           <div class="col-md-6">
             <mat-card>
-              <mat-card-header>{{first_name}}</mat-card-header>
+              <!-- <mat-card-header>{{first_name}}</mat-card-header> -->
             <mat-card-content>
               <mat-form-field class="mat-50">
                 <mat-label>First Name</mat-label>
@@ -29,7 +29,7 @@
                   </mat-form-field>                   
                         <mat-form-field>
                           <mat-label>Phone</mat-label>
-                          <input matInput placeholder="Placeholder" type="number" formControlName="phone" required />
+                          <input matInput placeholder="Placeholder" type="text" formControlName="phone" required />
                           <mat-icon matSuffix>phone</mat-icon>
                           <mat-error  *ngIf="firstFormGroup.get('phone')?.touched && firstFormGroup.get('phone')?.errors">Phone number is <strong> required </strong></mat-error>
                         </mat-form-field>
@@ -50,10 +50,10 @@
               </mat-card-content>
               <mat-card-actions class="relative">
                  <div class="absolute1">
-                   <button mat-button id="forgot" routerLink="/login" > Sign in instead</button>
+                   <button mat-button id="forgot" routerLink="/login" style="color:#1a73e8" > Sign in instead</button>
                  </div>
                  <div class="absolute2">
-                   <button mat-raised-button type="submit" color="primary"  matStepperNext [disabled]="firstFormGroup.get('password')?.errors && firstFormGroup.get('firstName')?.errors && firstFormGroup.get('lastName')?.errors && firstFormGroup.get('email')?.errors">Next</button>
+                   <button mat-raised-button type="submit"   matStepperNext [disabled]="firstFormGroup.get('password')?.errors && firstFormGroup.get('firstName')?.errors && firstFormGroup.get('lastName')?.errors && firstFormGroup.get('email')?.errors" style="color:white;background-color:#1a73e8">Next</button>
                  </div>       
                </mat-card-actions>
                </mat-card>

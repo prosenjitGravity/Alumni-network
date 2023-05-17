@@ -4,7 +4,7 @@
             <mat-card-title class="relative">Skills</mat-card-title>
             <div class="example-button-row">
                 <div class="example-flex-container absolute">
-                  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" >
+                  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="Openmodal()">
                     <mat-icon>add</mat-icon>
                   </button>
                   <button mat-icon-button  aria-label="Example icon button with a home icon">
@@ -17,7 +17,36 @@
         <mat-card-content>
             <!-- <mat-divider></mat-divider> -->
             <div class="p-2">
-                <p>Java</p>
+              <mat-chip-listbox aria-label="Dog selection">
+                <mat-chip>
+                  <img matChipAvatar src="assets/images/logo/java.png" alt="Photo of a Shiba Inu"/>
+                  Java
+                </mat-chip>
+                <mat-chip>
+                  <img matChipAvatar src="assets/images/logo/angular.svg" alt="Photo of a Shiba Inu"/>
+                  Angular
+                </mat-chip>
+                <mat-chip>
+                  <img matChipAvatar src="assets/images/logo/node.png" alt="Photo of a Shiba Inu"/>
+                  Node
+                </mat-chip>
+                <mat-chip>
+                  <img matChipAvatar src="assets/images/logo/sql.png" alt="Photo of a Shiba Inu"/>
+                  SQL
+                </mat-chip>
+                <mat-chip>
+                  <img matChipAvatar src="assets/images/logo/react.png" alt="Photo of a Shiba Inu"/>
+                  React
+                </mat-chip>
+                <mat-chip color="primary">
+                  <img matChipAvatar src="assets/images/logo/vue.png" alt="Photo of a Shiba Inu"/>
+                  Vue
+                </mat-chip>
+                <mat-chip color="accent">
+                  <img matChipAvatar src="assets/images/logo/python.png" alt="Photo of a Shiba Inu"/>
+                  Python
+                </mat-chip>
+              </mat-chip-listbox>
             </div>
         </mat-card-content>
     </mat-card>
