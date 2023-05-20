@@ -15,6 +15,7 @@ import { KnowledgeComponent } from './pages/knowledge/knowledge.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MyprofileComponent } from './pages/myprofile/myprofile.component';
 import { ApiCallComponent } from './components/api-call/api-call.component';
+import { AllPostComponent } from './pages/all-post/all-post.component';
 
 const routes: Routes = [
   {
@@ -58,6 +59,9 @@ const routes: Routes = [
   },
   {
     path:'fetch-api',component:ApiCallComponent
+  },
+  {
+    path:"all-post",component:AllPostComponent
   },
   {
     path:'**',component:NotFoundComponent

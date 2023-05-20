@@ -4,15 +4,18 @@
       <span [routerLink]="'/'" class="user-title">Welcome,{{ name }}</span>
       <span class="example-spacer"></span>
       <div>
-        <a mat-icon-button routerLink="/about" class="project-title">
+        <button mat-icon-button routerLink="/help" class="project-title">
           <mat-icon matBadge="0" matBadgeColor="warn">notifications</mat-icon>
           <span class="cdk-visually-hidden"></span>
-        </a>
-        <a mat-button class="project-title">
+        </button>
+        <button mat-icon-button routerLink="/help">
+          <mat-icon>live_help</mat-icon>
+        </button>
+        <button mat-button class="project-title">
           <div class="profile">
             <img src="{{ user_image }}" class="image" alt="" />
           </div>
-        </a>
+        </button>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
@@ -23,15 +26,18 @@
               <span [routerLink]="'/'" class="user-title">Welcome,{{ name }}</span>
               <span class="example-spacer"></span>
               <div>
-                <a mat-icon-button routerLink="/about" class="project-title">
+                <button mat-icon-button routerLink="/about" class="project-title">
                   <mat-icon matBadge="0" matBadgeColor="warn">notifications</mat-icon>
                   <span class="cdk-visually-hidden"></span>
-                </a>
-                <a mat-button class="project-title">
+                </button>
+                <button mat-icon-button routerLink="/help">
+                  <mat-icon>live_help</mat-icon>
+                </button>
+                <button mat-button class="project-title">
                   <div class="profile">
                     <img src="{{ user_image }}" class="image" alt="" />
                   </div>
-                </a>
+                </button>
               </div>
             </mat-toolbar-row>
 </mat-toolbar>

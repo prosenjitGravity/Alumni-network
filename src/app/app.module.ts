@@ -58,6 +58,12 @@ import { ValueArrayPipe } from './pipes/value-array.pipe';
 import {AppbarComponent} from './components/appbar/appbar.component'
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { ProfileLinksComponent } from './components/profile-links/profile-links.component';
+import { AllPostComponent } from './pages/all-post/all-post.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ListComponent } from './components/list/list.component';
+import {MatTableModule} from '@angular/material/table';
+import { DateFilterPipe } from './pipes/date-filter.pipe';
+import { MobileToolbarComponent } from './components/mobile-toolbar/mobile-toolbar.component';
 
 
 
@@ -91,7 +97,11 @@ import { ProfileLinksComponent } from './components/profile-links/profile-links.
     ToolbarComponent,
     ApiCallComponent,
     ValueArrayPipe,
-    ProfileLinksComponent
+    ProfileLinksComponent,
+    AllPostComponent,
+    ListComponent,
+    DateFilterPipe,
+    MobileToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -120,7 +130,9 @@ import { ProfileLinksComponent } from './components/profile-links/profile-links.
     MatChipsModule,
     MatButtonToggleModule,
     MatBadgeModule,
-    LayoutModule
+    LayoutModule,
+    MatExpansionModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

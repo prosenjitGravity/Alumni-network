@@ -3,14 +3,14 @@
       <mat-card-header>
         <div mat-card-avatar class="p-2">
           <img
-            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
+            src={{user_image}}
             class="example-header-image"
             alt=""
           />
         </div>
-        <mat-card-title style="margin-left: 15px;">Merida Avatar</mat-card-title>
+        <mat-card-title style="margin-left: 15px;">Raj Vikramaditya  <span style="font-size: 13px; color: #757575;">Alumni</span></mat-card-title>
         <mat-card-subtitle style="margin-left: 15px;"
-          >Talent Acquisition Specialist at Amazon</mat-card-subtitle
+          >{{date | date:'fullDate'}}</mat-card-subtitle
         >
       </mat-card-header>
       <mat-card-content>
@@ -20,7 +20,7 @@
           mountainous terrain, the Shiba Inu was originally bred for hunting.
         </p>
       </mat-card-content>
-      <img mat-card-image src="assets/images/AI.jpg" alt="Photo of a Shiba Inu" />
+      <img mat-card-image src={{post_image}} alt="Photo of a Shiba Inu" />
       <div class="p-1">
         <div class="container-fluid">
           <div class="row">
