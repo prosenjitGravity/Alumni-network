@@ -4,9 +4,9 @@
           <span [routerLink]="'/'" class="project-title title">{{title}}</span>
           <span class="example-spacer"></span>
           <div>
-            <a mat-button routerLink='/about' class="project-title" fxHide fxShow.gt-sm > About </a>
-            <a mat-button routerLink='/register' class="project-title" fxHide fxShow.gt-sm> Join </a>
-            <a mat-button routerLink="/login" class="project-title" fxHide fxShow.gt-sm> Signin </a>
+            <a mat-button routerLink='/about' class="project-title" fxHide fxShow.gt-sm  routerLinkActive="active" > About </a>
+            <a mat-button routerLink='/register' class="project-title" fxHide fxShow.gt-sm routerLinkActive="active"> Join </a>
+            <a mat-button [routerLink]="['/user-login']" class="project-title" fxHide fxShow.gt-sm routerLinkActive="active"> Signin </a>
             <button  mat-icon-button  fxShow fxHide.gt-sm>
               <mat-icon>menu</mat-icon>
              </button>
@@ -16,13 +16,13 @@
 
       <mat-toolbar class="secondToolbar"  [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}" color="primary" >
         <mat-toolbar-row>
-          <span [routerLink]="'/'" class="project-title title">{{title}}</span>
+          <span [routerLink]="'/'"  class="project-title title" style="color:cornflowerblue">{{title}}</span>
           <span class="example-spacer"></span>
           <div>
-            <a mat-button routerLink='/about' class="project-title" fxHide fxShow.gt-sm > About </a>
-            <a mat-button routerLink='/register' class="project-title" fxHide fxShow.gt-sm> Join </a>
-            <a mat-button routerLink="/login" class="project-title" fxHide fxShow.gt-sm> Signin </a>
-            <button  mat-icon-button  fxShow fxHide.gt-sm>
+            <a mat-button routerLink='/about' class="project-title" fxHide fxShow.gt-sm routerLinkActive="active"  style="color:cornflowerblue"> About </a>
+            <a mat-button routerLink='/register' class="project-title" fxHide fxShow.gt-sm routerLinkActive="active" style="color:cornflowerblue"> Join </a>
+            <a mat-button [routerLink]="['/user-login']" class="project-title" fxHide fxShow.gt-sm routerLinkActive="active" style="color:cornflowerblue"> Signin </a>
+            <button  mat-icon-button color="primary"  fxShow fxHide.gt-sm>
               <mat-icon>menu</mat-icon>
              </button>
           </div>

@@ -11,7 +11,7 @@
 
   .secondToolbar {
     position: fixed;
-    background: rgba(10, 10, 10, 0.51);
+    background: rgb(170 170 170 / 25%);
     backdrop-filter: blur(4.9px);
   -webkit-backdrop-filter: blur(4.9px);
     top: 0;

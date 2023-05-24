@@ -64,6 +64,7 @@ import { ListComponent } from './components/list/list.component';
 import {MatTableModule} from '@angular/material/table';
 import { DateFilterPipe } from './pipes/date-filter.pipe';
 import { MobileToolbarComponent } from './components/mobile-toolbar/mobile-toolbar.component';
+import { CardVideoComponent } from './components/card-video/card-video.component';
 
 
 
@@ -101,7 +102,8 @@ import { MobileToolbarComponent } from './components/mobile-toolbar/mobile-toolb
     AllPostComponent,
     ListComponent,
     DateFilterPipe,
-    MobileToolbarComponent
+    MobileToolbarComponent,
+    CardVideoComponent
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MyprofileComponent } from './pages/myprofile/myprofile.component';
 import { ApiCallComponent } from './components/api-call/api-call.component';
 import { AllPostComponent } from './pages/all-post/all-post.component';
+import { PostactivityComponent } from './components/postactivity/postactivity.component';
+import { AuthGuard } from './authentication/auth.guard';
 
 const routes: Routes = [
   {
@@ -55,14 +57,18 @@ const routes: Routes = [
     path:'dashboard', component:DashboardComponent
   },
   {
-    path:'my-profile', component:MyprofileComponent
+    path:'my-profile', component:MyprofileComponent,canActivate:[AuthGuard ]
   },
   {
     path:'fetch-api',component:ApiCallComponent
   },
   {
-    path:"all-post",component:AllPostComponent
+    path:"all-post",component:AllPostComponent,canActivate:[AuthGuard]
   },
+  {
+    path:"create-post",component:PostactivityComponent
+  },
+  { path: 'user-login', loadChildren: () => import('./user-login/user-login.module').then(m => m.UserLoginModule) },
   {
     path:'**',component:NotFoundComponent
   }
