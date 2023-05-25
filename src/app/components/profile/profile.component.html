@@ -16,7 +16,7 @@
       </button>
       <div class="img2">
         <img
-          src={{user_image}}
+          src={{profile_image}}
           class="profile-image"
           alt=""
         />
@@ -33,22 +33,24 @@
       </div>
       
       <div class="name">
-          <h1>{{first_name}}  {{last_name}} <span style="font-size: 12px; color: #616161;">(He/Him)</span></h1>
+          <h1>{{first_name |titlecase}}  {{last_name| titlecase}} <span style="font-size: 12px; color: #616161;">{{role | titlecase}}</span></h1>
           <div >
               <mat-chip-set class="example-chip"cdkDropList cdkDropListOrientation="horizontal">
-                  <mat-chip class="example-box"cdkDrag>#development</mat-chip>
+                  <mat-chip class="example-box"cdkDrag>#{{job_title}}</mat-chip>
                   <mat-chip class="example-box"cdkDrag>#datastructure & algorithm</mat-chip>
                   <mat-chip class="example-box"cdkDrag>#development</mat-chip>
               </mat-chip-set>
           </div>
-          <div class="p-1">
-            <p>No Address Found!</p>
+          <div class="p-2">
+            <p>{{address| titlecase}}</p>
           </div>
     </div>
-    
-    <div class="name p-3">
-      <button mat-raised-button  style="border-radius: 20px; background-color: #1a73e8;color:white"><mat-icon>add</mat-icon>Follow</button>
-    </div>
+     <ng-container *ngIf="first_name==first_name else notBlank"></ng-container>
+     <ng-template #notBlank>
+      <div class="name p-3">
+        <button mat-raised-button  style="border-radius: 20px; background-color: #1a73e8;color:white"><mat-icon>add</mat-icon>Follow</button>
+      </div>
+     </ng-template>
   </div>
   </mat-card>
 </div>

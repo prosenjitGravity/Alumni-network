@@ -2,9 +2,9 @@
     <mat-card>
       <mat-card-header class="example-card">
         <div class="box">
-          <img class="user_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRD3XP0y2U4ZVpcGsaFUu-tmM7-aD0Luj6FgQgqdJc&s" alt="">
+          <img class="user_image" src={{profile_image}} alt="">
         </div>
-        <button type="button" class="btn text-start  btn-lg btn-block post-input">Create Post</button>
+        <button type="button" class="btn text-start  btn-lg btn-block post-input" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create Post</button>
       </mat-card-header>
       <mat-card-content>
         <div class=" p-2 ">
@@ -17,4 +17,34 @@
       </mat-card-content>
     </mat-card>
   </div>
+  <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="box">
+          <img class="user_image" src={{profile_image}} alt="">
+        </div>
+        <h1 class="p-3">{{first_name | titlecase}} {{last_name|titlecase}}</h1>
+        <button  color="warn" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color:red" >
+
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="postForm" >
+          <mat-form-field>
+            <textarea matInput placeholder="what  do you want to talk about?" formControlName="post" style="width:100%"></textarea>
+            <mat-error>please write something</mat-error>
+          </mat-form-field>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button mat-raised-button color="warn" type="button"  data-bs-dismiss="modal">Close</button>
+        <button mat-raised-button color="primary" type="button" data-bs-dismiss="modal" (click)="postData()" [disabled]="!postForm.valid" >post</button>
+      </div>
+    </div>
+  </div>
+</div>  
   

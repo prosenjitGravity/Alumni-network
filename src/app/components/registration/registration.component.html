@@ -1,12 +1,10 @@
+<app-appbar></app-appbar>
 <div class="container-fluid">
   <mat-stepper [linear]="false" #stepper>
     <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup" (ngSubmit)="formData()" >
+      <form [formGroup]="firstFormGroup" (ngSubmit)="formData1()" >
         <ng-template matStepLabel>Sign Up</ng-template>
           <div class="row">
-          <div class="col-md-4">
-            <img src="assets/images/avatar2.jpg" class="img-fluid" alt="" />
-          </div>
           <div class="col-md-6">
             <mat-card>
               <!-- <mat-card-header>{{first_name}}</mat-card-header> -->
@@ -23,13 +21,13 @@
                 </mat-form-field>
                 <mat-form-field >
                     <mat-label>Email</mat-label>
-                    <input matInput placeholder="example123@example.com" type="email" formControlName="email"  required/>
+                    <input matInput placeholder="example123@example.com" type="email" name="email" formControlName="email"  required/>
                     <mat-icon  matSuffix>email</mat-icon>
                     <mat-error  *ngIf="firstFormGroup.get('email')?.touched && firstFormGroup.get('email')?.errors">Email is <strong> required </strong></mat-error>
                   </mat-form-field>                   
                         <mat-form-field>
                           <mat-label>Phone</mat-label>
-                          <input matInput placeholder="Placeholder" type="text" formControlName="phone" required />
+                          <input matInput placeholder="Placeholder" type="number" formControlName="phone" required />
                           <mat-icon matSuffix>phone</mat-icon>
                           <mat-error  *ngIf="firstFormGroup.get('phone')?.touched && firstFormGroup.get('phone')?.errors">Phone number is <strong> required </strong></mat-error>
                         </mat-form-field>
@@ -47,41 +45,559 @@
                           </button>
                           <mat-error  *ngIf="firstFormGroup.get('password')?.touched && firstFormGroup.get('password')?.errors">Paassword is <strong> required </strong></mat-error>
                         </mat-form-field>
+                        <mat-radio-group aria-label="Select an option" formControlName="gender">
+                          <mat-radio-button value="Male">Male</mat-radio-button>
+                          <mat-radio-button value="Female">Female</mat-radio-button>
+                          <mat-error *ngIf="firstFormGroup.get('gender')?.touched && firstFormGroup.get('gender')?.errors">gender is</mat-error>
+                        </mat-radio-group>
               </mat-card-content>
               <mat-card-actions class="relative">
                  <div class="absolute1">
                    <button mat-button id="forgot" routerLink="/login" style="color:#1a73e8" > Sign in instead</button>
                  </div>
                  <div class="absolute2">
-                   <button mat-raised-button type="submit"   matStepperNext [disabled]="firstFormGroup.get('password')?.errors && firstFormGroup.get('firstName')?.errors && firstFormGroup.get('lastName')?.errors && firstFormGroup.get('email')?.errors" style="color:white;background-color:#1a73e8">Next</button>
+                   <button mat-raised-button type="submit"   matStepperNext [disabled]="!firstFormGroup.valid" >Next</button>
                  </div>       
                </mat-card-actions>
                </mat-card>
+            
+          </div>
+          <div class="col-md-6">
+            <img src="assets/images/avatar2.jpg" class="img-fluid" alt="" />
           </div>
           </div>
       </form>
     </mat-step>
     <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-      <form [formGroup]="secondFormGroup">
-        <mat-form-field appearance="fill">
-          <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                 required>
-        </mat-form-field>
-        <div>
+      <div class="text-center p-2">
+        <h1>
+          Hi, <span style="color:#1a73e8">{{first_name |titlecase}} </span>Your profile helps you discover new people and
+          opportunities
+        </h1>
+      </div>
+      <form [formGroup]="secondFormGroup" (ngSubmit)="formData2()">
+         <div class="row g-0">
+          <div class="col-md-6">
+            <div>
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title class="text-center">Hi, Choose your Role</mat-card-title>
+                </mat-card-header>
+                <mat-form-field>
+                  <mat-label>Choose User</mat-label>
+                  <mat-card-content>
+                    <mat-select formControlName="role">
+                      <mat-option>None</mat-option>
+                        <mat-option value="alumni">Alumni</mat-option>
+                        <mat-option value="student">Student</mat-option>
+                    </mat-select>
+                  </mat-card-content>
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label>Netaji Subhash Engineering College</mat-label>
+                  <mat-select [disabled]="true"> </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label>Choose Courses</mat-label>
+                  <mat-card-content>
+                    <mat-select formControlName="user_course">
+                      <mat-option *ngFor="let r of courses" [value]="r.course_name">
+                        {{ r.course_name }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-card-content>
+                </mat-form-field>
+                <div>
+                  <mat-form-field class="mat-50" >
+                    <mat-label>Start year</mat-label>
+                    <mat-select formControlName="start">
+                      <mat-option value="1998">1998</mat-option>
+                      <mat-option value="1999">1999</mat-option>
+                      <mat-option value="2000">2000</mat-option>
+                      <mat-option value="2001">2001</mat-option>
+                      <mat-option value="2002">2002</mat-option>
+                      <mat-option value="2003">2003</mat-option>
+                      <mat-option value="2004">2004</mat-option>
+                      <mat-option value="2005">2005</mat-option>
+                      <mat-option value="2006">2006</mat-option>
+                      <mat-option value="2007">2007</mat-option>
+                      <mat-option value="2008">2008</mat-option>
+                      <mat-option value="2009">2009</mat-option>
+                      <mat-option value="2010">2010</mat-option>
+                      <mat-option value="2011">2011</mat-option>
+                      <mat-option value="2012">2012</mat-option>
+                      <mat-option value="2013">2013</mat-option>
+                      <mat-option value="2014">2014</mat-option>
+                      <mat-option value="2015">2015</mat-option>
+                      <mat-option value="2016">2016</mat-option>
+                      <mat-option value="2017">2017</mat-option>
+                      <mat-option value="2018">2018</mat-option>
+                      <mat-option value="2019">2019</mat-option>
+                      <mat-option value="2020">2020</mat-option>
+                      <mat-option value="2021">2021</mat-option>
+                      <mat-option value="2022">2022</mat-option>
+                      <mat-option value="2023">2023</mat-option>
+                      <mat-option value="2024">2024</mat-option>
+                      <mat-option value="2025">2025</mat-option>
+                      <mat-option value="2017">2026</mat-option>
+                      <mat-option value="2018">2027</mat-option>
+                      <mat-option value="2019">2028</mat-option>
+                      <mat-option value="2020">2029</mat-option>
+                      <mat-option value="2021">2030</mat-option>
+                      <mat-option value="2022">2031</mat-option>
+                      <mat-option value="2023">2032</mat-option>
+                      <mat-option value="2024">2033</mat-option>
+                      <mat-option value="2025">2034</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="animalControl.hasError('required')"
+                      >Please choose course start year</mat-error
+                    >
+                  </mat-form-field >
+                  <mat-form-field class="mat-50" >
+                    <mat-label>End year</mat-label>
+                    <mat-select formControlName="end"  required>
+
+                      <mat-option value="1998">1998</mat-option>
+                      <mat-option value="1999">1999</mat-option>
+                      <mat-option value="2000">2000</mat-option>
+                      <mat-option value="2001">2001</mat-option>
+                      <mat-option value="2002">2002</mat-option>
+                      <mat-option value="2003">2003</mat-option>
+                      <mat-option value="2004">2004</mat-option>
+                      <mat-option value="2005">2005</mat-option>
+                      <mat-option value="2006">2006</mat-option>
+                      <mat-option value="2007">2007</mat-option>
+                      <mat-option value="2008">2008</mat-option>
+                      <mat-option value="2009">2009</mat-option>
+                      <mat-option value="2010">2010</mat-option>
+                      <mat-option value="2011">2011</mat-option>
+                      <mat-option value="2012">2012</mat-option>
+                      <mat-option value="2013">2013</mat-option>
+                      <mat-option value="2014">2014</mat-option>
+                      <mat-option value="2015">2015</mat-option>
+                      <mat-option value="2016">2016</mat-option>
+                      <mat-option value="2017">2017</mat-option>
+                      <mat-option value="2018">2018</mat-option>
+                      <mat-option value="2019">2019</mat-option>
+                      <mat-option value="2020">2020</mat-option>
+                      <mat-option value="2021">2021</mat-option>
+                      <mat-option value="2022">2022</mat-option>
+                      <mat-option value="2023">2023</mat-option>
+                      <mat-option value="2024">2024</mat-option>
+                      <mat-option value="2025">2025</mat-option>
+                      <mat-option value="2026">2026</mat-option>
+                      <mat-option value="2027">2027</mat-option>
+                      <mat-option value="2028">2028</mat-option>
+                      <mat-option value="2029">2029</mat-option>
+                      <mat-option value="2030">2030</mat-option>
+                      <mat-option value="2031">2031</mat-option>
+                      <mat-option value="2032">2032</mat-option>
+                      <mat-option value="2033">2033</mat-option>
+                      <mat-option value="2034">2034</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="animalControl.hasError('required')"
+                      >Please choose course end year</mat-error
+                    >
+                  </mat-form-field> 
+                  <mat-form-field >
+                    <mat-label>enter your address</mat-label>
+                    <input matInput placeholder=""  formControlName="address" required/>
+                    <mat-error  >Address is <strong> required </strong></mat-error>
+                  </mat-form-field>
+                </div>
+                <mat-card-actions>
+                  <div>
+                    <div>
+                      <button
+                        color="accent"
+                        mat-raised-button
+                        matStepperPrevious
+                      >
+                        <mat-icon>arrow_back</mat-icon>
+                        Previous
+                      </button>
+                    </div>
+                    <div class="position-absolute bottom-0 end-0 p-2">
+                      <button
+                      [disabled]="!secondFormGroup.valid"
+                        mat-raised-button
+                        matStepperNext
+                        matPrefix
+                      >
+                        Next
+                        <span mat-icon fontIcon="home"></span>
+                      </button>
+                    </div>
+                  </div>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="assets/images/avatar2.jpg" class="img-fluid" alt="" />
+          </div>
+         </div>
+        <!-- <div>
           <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
+          <button mat-button matStepperNext [disabled]="!secondFormGroup.valid">Next</button>
+        </div> -->
       </form>
     </mat-step>
-    <mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
       <ng-template matStepLabel>Done</ng-template>
       <p>You are now done.</p>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+        <div>
+          <div class="row">
+            <div class="col-md-6">
+              <form [formGroup]="thirdFormGroup" (ngSubmit)="formData3()">
+                <mat-card>
+                  <mat-card-header>
+                    <mat-card-title>Conformation</mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <ng-container *ngIf="user_role==='student' else user_alumni "></ng-container>
+                    <ng-template #user_alumni>
+                      <mat-form-field class="mat-50">
+                        <mat-label>Company Name</mat-label>
+                        <input matInput placeholder="Albert"  formControlName="job_title" required/>
+                        <mat-error  *ngIf="thirdFormGroup.get('job_title')?.touched && thirdFormGroup.get('job_title')?.errors ">Job title is <strong> required </strong></mat-error>
+                      </mat-form-field>
+                       <mat-form-field  class="mat-50">
+                          <mat-label>Job Title</mat-label>
+                          <input matInput placeholder="Einstein" formControlName="company_name" required />
+                          <mat-error  *ngIf="thirdFormGroup.get('company_name')?.touched && thirdFormGroup.get('company_name')?.errors">Company name is <strong> required </strong></mat-error>
+                        </mat-form-field>
+                    </ng-template>
+                    <div>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Confirm Email Address</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="confirm_email" />
+                        <mat-icon matSuffix>email</mat-icon>
+                        <mat-error
+                          >Email is <strong> required </strong></mat-error
+                        >
+                      </mat-form-field>
+                    </div>
+                    <div>
+                      <mat-form-field id="outline" appearance="outline">
+                        <mat-label>Confirm Password </mat-label>
+                        <input
+                          matInput
+                          [type]="hide ? 'password' : 'text'"
+                          formControlName="confirm_password"
+                          required
+                        />
+                        <button
+                          mat-icon-button
+                          matSuffix
+                          (click)="hide = !hide"
+                          [attr.aria-label]="'Hide password'"
+                          [attr.aria-pressed]="hide"
+                        >
+                          <mat-icon>{{
+                            hide ? "visibility_off" : "visibility"
+                          }}</mat-icon>
+                        </button>
+                        <mat-error
+                          >Password is <strong> required </strong></mat-error
+                        >
+                      </mat-form-field>
+                    </div>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button
+                      color="accent"
+                      mat-raised-button
+                      matStepperPrevious
+                    >
+                      <mat-icon>arrow_back</mat-icon>
+                      Previous
+                    </button>
+                    <div class="position-absolute end-0 p-4">
+                      <button
+                        color="primary"
+                        mat-raised-button
+                        [disabled]="thirdFormGroup.valid"
+                      >
+                        Signup 
+                      </button>
+                    </div>
+                  </mat-card-actions>
+                </mat-card>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </mat-step>
   </mat-stepper>
 
 </div>
+
+
+
+
+
+<!-- <div>
+  <app-appbar></app-appbar>
+  <div>
+    <div class="wrapper">
+      <mat-stepper>
+        <mat-step label="User details" [stepControl]="firstForm">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>Alumni Network Registration</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <form [formGroup]="firstForm">
+                    <mat-form-field class="mat-50">
+                      <mat-label>First Name</mat-label>
+                      <input matInput formControlName="first_name" placeholder="Albert" required />
+                      <mat-error
+                        >First name is <strong> required </strong></mat-error
+                      >
+                    </mat-form-field>
+                    <mat-form-field class="mat-50">
+                      <mat-label>Last Name</mat-label>
+                      <input matInput formControlName="last_name" placeholder="Einstein" required />
+                      <mat-error
+                        >Last name is <strong> required </strong></mat-error
+                      >
+                    </mat-form-field>
+                    <mat-form-field>
+                      <mat-label>Email</mat-label>
+                      <input
+                        matInput formControlName="email"
+                        placeholder="example123@example.com"
+                        type="email"
+                        required
+                      />
+                      <mat-icon matSuffix>email</mat-icon>
+                      <mat-error
+                        >Email is <strong> required </strong></mat-error
+                      >
+                    </mat-form-field>
+                    <mat-form-field>
+                      <mat-label>Phone</mat-label>
+                      <input
+                        matInput
+                        formControlName="phone"
+                        placeholder="Placeholder"
+                        type="tel"
+                        required
+                      />
+                      <mat-icon matSuffix>phone</mat-icon>
+                      <mat-error
+                        >Phone number is <strong> required </strong></mat-error
+                      >
+                    </mat-form-field>
+                    <mat-radio-group
+                      color="primary"
+                      formControlName="gender"
+                      aria-label="Select an option"
+                    >
+                      <mat-radio-button value="Male">Male</mat-radio-button>
+                      <mat-radio-button value="Female">Female</mat-radio-button>
+                    </mat-radio-group>
+                    <mat-card-actions class="relative">
+                      <div class="absolute1">
+                        <button
+                          mat-button
+                          id="forgot"
+                          routerLink="/login"
+                          style="color: #1a73e8"
+                        >
+                          Sign in instead
+                        </button>
+                      </div>
+                      <div class="absolute2">
+                        <button
+                          mat-raised-button
+                          [disabled]="!firstForm.valid"
+                          type="button"
+                          matStepperNext
+                          style="color: white; background-color: #1a73e8"
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </mat-card-actions>
+                  </form>
+                </mat-card-content>
+              </mat-card>
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+        </mat-step>
+        <mat-step label="choose your role">
+          <div class="text-center">
+            <h1>
+              Hi, Prosenjit Your profile helps you discover new people and
+              opportunities
+            </h1>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div>
+                <mat-card>
+                  <mat-card-header>
+                    <mat-card-title class="text-center"
+                      >Hi, Choose your Role</mat-card-title
+                    >
+                  </mat-card-header>
+                  <mat-form-field>
+                    <mat-label>Choose User</mat-label>
+                    <mat-card-content>
+                      <mat-select>
+                        <mat-option *ngFor="let r of role" [value]="r.value">
+                          {{ r.viewValue }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-card-content>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Netaji Subhash Engineering College</mat-label>
+                    <mat-select [disabled]="true"> </mat-select>
+                  </mat-form-field>
+                  <div>
+                    <mat-form-field class="mat-50">
+                      <mat-label>Start year</mat-label>
+                      <mat-select [formControl]="animalControl" required>
+                        <mat-option>--</mat-option>
+                        <mat-option
+                          *ngFor="let animal of animals"
+                          [value]="animal"
+                        >
+                          {{ animal.name }}
+                        </mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="animalControl.hasError('required')"
+                        >Please choose an animal</mat-error
+                      >
+                    </mat-form-field>
+                    <mat-form-field class="mat-50">
+                      <mat-label>End year</mat-label>
+                      <mat-select [formControl]="animalControl" required>
+                        <mat-option>--</mat-option>
+                        <mat-option
+                          *ngFor="let animal of animals"
+                          [value]="animal"
+                        >
+                          {{ animal.name }}
+                        </mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="animalControl.hasError('required')"
+                        >Please choose an animal</mat-error
+                      >
+                    </mat-form-field>
+                  </div>
+                  <mat-card-actions>
+                    <div>
+                      <div>
+                        <button
+                          color="accent"
+                          mat-raised-button
+                          matStepperPrevious
+                        >
+                          <mat-icon>arrow_back</mat-icon>
+                          Previous
+                        </button>
+                      </div>
+                      <div class="position-absolute bottom-0 end-0 p-2">
+                        <button
+                          mat-raised-button
+                          matStepperNext
+                          matPrefix
+                          style="color: white; background-color: #1a73e8"
+                        >
+                          Next
+                          <span mat-icon fontIcon="home"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </mat-card-actions>
+                </mat-card>
+              </div>
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+        </mat-step>
+        <mat-step label="enter password here">
+          <div>
+            <div class="row">
+              <div class="col-md-6">
+                <form>
+                  <mat-card>
+                    <mat-card-header>
+                      <mat-card-title>Verifying</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <div>
+                        <mat-form-field appearance="outline">
+                          <mat-label>Enter Email Address</mat-label>
+                          <input matInput placeholder="Placeholder" />
+                          <mat-icon matSuffix>email</mat-icon>
+                          <mat-error
+                            >Email is <strong> required </strong></mat-error
+                          >
+                        </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field id="outline" appearance="outline">
+                          <mat-label>Password</mat-label>
+                          <input
+                            matInput
+                            [type]="hide ? 'password' : 'text'"
+                            formControlName="password"
+                            required
+                          />
+                          <button
+                            mat-icon-button
+                            matSuffix
+                            (click)="hide = !hide"
+                            [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide"
+                          >
+                            <mat-icon>{{
+                              hide ? "visibility_off" : "visibility"
+                            }}</mat-icon>
+                          </button>
+                          <mat-error
+                            >Password is <strong> required </strong></mat-error
+                          >
+                        </mat-form-field>
+                      </div>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button
+                        color="accent"
+                        mat-raised-button
+                        matStepperPrevious
+                      >
+                        <mat-icon>arrow_back</mat-icon>
+                        Previous
+                      </button>
+                      <div class="position-absolute end-0 p-4">
+                        <button
+                          color="primary"
+                          mat-raised-button
+                          style="color: white; background-color: #1a73e8"
+                          (click)="allData()"
+                        >
+                          Signup 
+                        </button>
+                      </div>
+                    </mat-card-actions>
+                  </mat-card>
+                </form>
+              </div>
+            </div>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    </div>
+  </div>
+</div> -->

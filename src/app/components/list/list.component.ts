@@ -18,7 +18,6 @@ export class ListComponent {
       .subscribe( (response:any)=>{
         this.users=response.msg;
         console.log(this.users);
-      })
-      
+      })  
   } 
 }
