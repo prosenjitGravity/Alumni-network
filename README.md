@@ -1,6 +1,9 @@
 # Alumni Network Community
 ![Screenshot (861)](https://github.com/prosenjitGravity/Alumni-network/assets/90416951/6cc49e5e-fae9-4f99-ba37-51702f749780)
 
+![Screenshot (864)](https://github.com/prosenjitGravity/Alumni-network/assets/90416951/4c98af15-cdc4-40ae-add1-7780983daac8)
+![Uploading Screenshot (863).png…]()
+
 <img src="./.././my-alumni/src/assets/images/Screenshot1.png" >
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
