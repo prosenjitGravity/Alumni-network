@@ -1,4 +1,5 @@
 # Alumni Network Community
+![Screenshot (861)](https://github.com/prosenjitGravity/Alumni-network/assets/90416951/6cc49e5e-fae9-4f99-ba37-51702f749780)
 
 <img src="./.././my-alumni/src/assets/images/Screenshot1.png" >
 
