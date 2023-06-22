@@ -1,6 +1,6 @@
 # Alumni Network Community
 
-<img src="./.././my-alumni/src/assets/images/Screenshot20(861).png" >
+<img src="./.././my-alumni/src/assets/images/Screenshot1.png" >
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
