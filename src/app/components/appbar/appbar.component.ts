@@ -10,7 +10,7 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./appbar.component.css']
 })
 export class AppbarComponent {
- public title:String ='Nsec Alumni Community'
+ public title:String ='Alumni Network Community'
  public isSticky:any;
  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
  .pipe(

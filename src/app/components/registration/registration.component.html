@@ -87,7 +87,6 @@
                   <mat-label>Choose User</mat-label>
                   <mat-card-content>
                     <mat-select formControlName="role">
-                      <mat-option>None</mat-option>
                         <mat-option value="alumni">Alumni</mat-option>
                         <mat-option value="student">Student</mat-option>
                     </mat-select>
@@ -318,7 +317,7 @@
                       <button
                         color="primary"
                         mat-raised-button
-                        [disabled]="thirdFormGroup.valid"
+                        
                       >
                         Signup 
                       </button>
@@ -332,7 +331,6 @@
       </div>
     </mat-step>
   </mat-stepper>
-
 </div>
 
 
