@@ -3,8 +3,8 @@
 ![Screenshot (861)](https://github.com/prosenjitGravity/Alumni-network/assets/90416951/6cc49e5e-fae9-4f99-ba37-51702f749780)
 
 ## Alumni Network Community Frontpage
+![Screenshot (865)](https://github.com/prosenjitGravity/Alumni-network/assets/90416951/a95f7722-1b2b-4a91-8101-2add6abd9a25)
 
-![Screenshot (864)](https://github.com/prosenjitGravity/Alumni-network/assets/90416951/4c98af15-cdc4-40ae-add1-7780983daac8)
 ## Sign up Page
 ![Screenshot (863)](https://github.com/prosenjitGravity/Alumni-network/assets/90416951/bc8ab273-a34c-4ac3-83e5-e438a475ad81)
 
