@@ -1,6 +1,7 @@
 # Alumni Network Community
 ## Student or Alumni Posts
-![Screenshot (861)](https://github.com/prosenjitGravity/Alumni-network/assets/90416951/157050ed-eebf-4a77-8da5-5f9ecd23343d)
+![Screenshot (862)](https://github.com/prosenjitGravity/Alumni-network/assets/90416951/36f0ad3d-30e9-4845-896a-9a865e90672f)
+
 
 ## Profile 
 ![Screenshot (868)](https://github.com/prosenjitGravity/Alumni-network/assets/90416951/a5cf4380-f0bc-4299-a050-9f400b1d8eb4)
